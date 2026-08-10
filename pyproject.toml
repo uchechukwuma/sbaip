@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sbaip"
+version = "0.1.0"
+description = "Smart Building Asset Intelligence Platform — transforming BIM (IFC) into a living digital twin with data engineering pipelines"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Uchechukwu Obi", email = "uchechukwumaobi@outlook.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Building Information Modeling (BIM)",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = [
+    "bim",
+    "ifc",
+    "digital-twin",
+    "building-information-modeling",
+    "facility-management",
+    "data-engineering",
+    "ifcopenshell",
+    "postgresql",
+]
+dependencies = [
+    "ifcopenshell>=0.8.0",
+    "pandas>=2.2.0",
+    "numpy>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+database = [
+    "supabase>=2.5.0",
+    "psycopg2-binary>=2.9.0",
+]
+api = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.31.0",
+    "python-multipart>=0.0.12",
+    "pydantic>=2.9.0",
+]
+dashboard = [
+    "streamlit>=1.38.0",
+    "plotly>=5.24.0",
+]
+quality = [
+    "great-expectations>=1.0.0",
+]
+orchestration = [
+    "apache-airflow>=2.10.0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "ruff>=0.5.0",
+    "mypy>=1.10.0",
+]
+all = [
+    "sbaip[database]",
+    "sbaip[api]",
+    "sbaip[dashboard]",
+    "sbaip[quality]",
+    "sbaip[orchestration]",
+    "sbaip[dev]",
+]
+
+[project.urls]
+Homepage = "https://github.com/uchechukwuma/sbaip"
+Repository = "https://github.com/uchechukwuma/sbaip"
+Documentation = "https://github.com/uchechukwuma/sbaip/tree/main/docs"
+Issues = "https://github.com/uchechukwuma/sbaip/issues"
+
+[project.scripts]
+sbaip-extract = "sbaip.extract.ifc_parser:main"
+
+[tool.black]
+line-length = 120
+target-version = ["py310", "py311", "py312", "py313", "py314"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-v --tb=short"
+testpaths = ["tests"]
