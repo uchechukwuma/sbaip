@@ -220,12 +220,12 @@ class IFCParser:
                 "storey": elem["Storey"],
                 "space": elem["Space"],
             }
-            # Add properties as flattened columns
+            # Properties added as flattened columns
             for pset_name, props in elem["Properties"].items():
                 for prop_name, value in props.items():
                     if value is not None:
                         col_name = f"{pset_name}_{prop_name}".replace(" ", "_")
-                        # Convert lists to strings for CSV
+                        # Converts lists to strings for CSV
                         if isinstance(value, list):
                             value = ", ".join(str(v) for v in value)
                         row[col_name] = str(value)[:500]  # Truncate long values
@@ -291,8 +291,8 @@ class IFCParser:
 
 def main():
     """Main execution function."""
-    # Path to your IFC file — CHANGE THIS
-    ifc_file = "data/raw/Building-Architecture.ifc"
+    # Path to IFC file
+    ifc_file = "data/raw/Duplex_A_20110907.ifc"
     
     # Initialize parser
     parser = IFCParser(ifc_file)
