@@ -9,7 +9,7 @@
 
 ---
 
-## 📖 Overview
+##  Overview
 
 **SBAIP** is a data engineering platform that extracts structured asset data from IFC/BIM files and prepares it for a living digital twin.
 
@@ -28,11 +28,11 @@ A cloud-based platform that transforms a Building Information Model (IFC) into a
 
 ---
 
-## 🤔 Why This Project Exists
+##  Why This Project Exists
 
 This project bridges the gap between **BIM (design phase)** and **facility management (operations phase)**. It is the foundation for answering questions that currently require manual searches across emails, PDFs, and spreadsheets. This platform is the first step toward a fully connected digital twin.
 
-## 🎯 Current Status
+##  Current Status
 
 | Phase | Focus | Status |
 |---------|---------|---------|
@@ -45,7 +45,7 @@ This project bridges the gap between **BIM (design phase)** and **facility manag
 
 ---
 
-## 📊 Phase 1 Results
+##  Phase 1 Results
 
 | Metric | Value |
 |---------|---------|
@@ -77,7 +77,7 @@ This project bridges the gap between **BIM (design phase)** and **facility manag
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Layer | Technology | Status |
 |---------|---------|---------|
@@ -105,7 +105,7 @@ This will transform the platform from a file-based extraction tool into a querya
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 sbaip/
@@ -128,7 +128,7 @@ sbaip/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -167,7 +167,7 @@ python src/extract/ifc_parser.py
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 | Document | Description |
 |---------|---------|
@@ -179,7 +179,7 @@ python src/extract/ifc_parser.py
 
 ---
 
-## 🧠 Architecture Decision Records
+##  Architecture Decision Records
 
 | ADR | Title | Status |
 |---------|---------|---------|
@@ -194,7 +194,7 @@ python src/extract/ifc_parser.py
 
 ---
 
-## ⚠️ Known Issues
+##  Known Issues
 
 | Issue | Status | Mitigation |
 |---------|---------|---------|
@@ -205,13 +205,13 @@ python src/extract/ifc_parser.py
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
-## 👤 Author
+##  Author
 
 **Uchechukwu Obi**
 
@@ -220,7 +220,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - IfcOpenShell — IFC parsing library
 - buildingSMART — IFC standards
@@ -228,14 +228,14 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-## 📌 Related Projects
+##  Related Projects
 
 - **Edge DataOps Platform** — IoT data pipeline (reused for SBAIP)
 - **Career Intelligence Dashboard** — Data engineering portfolio
 
 ---
 
-## 📊 Project Status
+##  Project Status
 
 | Phase | Status | Completion |
 |---------|---------|---------|
